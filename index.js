@@ -56,6 +56,9 @@ function beginGame(randomWord){
     })
 }
 
+// Main will get called at the beginning of the app
+// and Only when the word is either guessed or when 
+// user lost
 function main(){
 
     // get a random word
