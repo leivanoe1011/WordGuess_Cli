@@ -3,7 +3,7 @@ var Word = require("./word");
 
 var inquirer = require("inquirer");
 
-var words = ["scissor","paper","rock","water"];
+var words = ["scissor","paper","rock","water","car","house"];
 
 var guessCnt = 10;
 
@@ -42,14 +42,17 @@ function beginGame(randomWord){
         if(!tempWord.includes('_') && guessCnt > 0){
             console.log("You won!")
             console.log(`${tempWord}`);
-            main();
+
+            // We need the app to completly restart
+            // Which is why we return the Main function
+            return main(); 
         }
 
         guessCnt--;
 
         if(guessCnt === 0){
             console.log("You lost");
-            main();
+            return main();
         }
 
         // Iterate through the word
@@ -66,6 +69,7 @@ function main(){
     // get a random word
     wordToGuess = words[randomCnt()];
 
+    console.log("In Main");
     console.log(wordToGuess);
 
     // create the word object
