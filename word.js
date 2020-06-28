@@ -15,14 +15,14 @@ var Word = function(word){
         var letter = new Letter(this.word[i]);
 
         // Loading the Letter constructor
-        currentWordArr.push(letter);
+        this.currentWordArr.push(letter);
     }
    
     // Return the letters that have been guessed or not guessed.
     this.currentWord = function(){
         var word = "";
         var wordArr = this.currentWordArr;
-        
+
         for(var i = 0; i < wordArr.length; i++){
             // For each letter we call the Return Character/Letter
             // function. 
