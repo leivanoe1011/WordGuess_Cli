@@ -27,11 +27,27 @@ function beginGame(randomWord){
         {
             name: "guess",
             message: "Guess a letter! ",
-            type: "input"
+            type: "input",
+            validate: value => {
+                var char = value.toLowerCase();
+
+                var numbers = /^[0-9]+$/;
+
+                // make sure we don't receive numbers
+                if(char.value.match(numbers)){
+                    return false;
+                }
+
+                // Only one character
+                if(char.length === 1){
+                    return true;
+                }
+
+                return false;
+            }
         }
     ])
     .then(function(answer){
-        console.log(answer);
 
         word.letterGuess(answer.guess);
 

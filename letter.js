@@ -24,10 +24,6 @@ var Letter = function(letter){
         // Then determine if the letter is correct.
         var gotLetter = letter.toLowerCase();
 
-        console.log(`In Letter User Guess ${gotLetter}`);
-
-        console.log(`Current Letter ${this.letter}`);
-
         if(this.letter === gotLetter){
             console.log("Letter Guessed!!!!");
             this.letterGuessed = true;
