@@ -40,6 +40,8 @@ var Word = function(word){
         // is correct.
         var gotLetter = letter;
 
+        var wordArr = this.currentWordArr;
+
         for(var i = 0; i < wordArr[i].length; i++){
             wordArr[i].userGuess(gotLetter);
         }

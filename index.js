@@ -20,6 +20,8 @@ function beginGame(randomWord){
     
     var word = randomWord;
 
+    console.log(word.word());
+
     inquirer
     .prompt([
         {
@@ -63,6 +65,8 @@ function main(){
 
     // get a random word
     wordToGuess = words[randomCnt()];
+
+    console.log(wordToGuess);
 
     // create the word object
     var word = new Word(wordToGuess);
