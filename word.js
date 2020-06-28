@@ -21,6 +21,8 @@ var Word = function(word){
     // Return the letters that have been guessed or not guessed.
     this.currentWord = function(){
         var word = "";
+        console.log("In current word");
+
         var wordArr = this.currentWordArr;
 
         for(var i = 0; i < wordArr.length; i++){
@@ -42,7 +44,9 @@ var Word = function(word){
 
         var wordArr = this.currentWordArr;
 
-        for(var i = 0; i < wordArr[i].length; i++){
+        console.log(`In Word Letter Guess ${gotLetter}`);
+
+        for(var i = 0; i < wordArr.length; i++){
             wordArr[i].userGuess(gotLetter);
         }
         

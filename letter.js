@@ -12,7 +12,7 @@ var Letter = function(letter){
         // Here we return either an underscore
         // or the letter depending on the 
         // Letter Guessed flag.
-        if(this.gotLetterletterGuessed){
+        if(this.letterGuessed){
             return `${this.letter} `;
         }
 
@@ -24,8 +24,13 @@ var Letter = function(letter){
         // Then determine if the letter is correct.
         var gotLetter = letter.toLowerCase();
 
+        console.log(`In Letter User Guess ${gotLetter}`);
+
+        console.log(`Current Letter ${this.letter}`);
+
         if(this.letter === gotLetter){
-            letterGuessed = true;
+            console.log("Letter Guessed!!!!");
+            this.letterGuessed = true;
         }
 
     }

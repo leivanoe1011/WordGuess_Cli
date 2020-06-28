@@ -20,7 +20,7 @@ function beginGame(randomWord){
     
     var word = randomWord;
 
-    console.log(word.word());
+    console.log(word.currentWord());
 
     inquirer
     .prompt([
