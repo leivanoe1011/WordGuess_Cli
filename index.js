@@ -3,7 +3,7 @@ var Word = require("./word");
 
 var inquirer = require("inquirer");
 
-var words = ["scissor","paper","rock","water","car","house"];
+var words = ["scissor","paper","rock","water","car","house","gym","package"];
 
 var guessCnt = 10;
 
