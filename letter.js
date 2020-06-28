@@ -13,7 +13,7 @@ var Letter = function(letter){
         // or the letter depending on the 
         // Letter Guessed flag.
         if(letterGuessed){
-            return this.letter;
+            return `${this.letter} `;
         }
 
         return "_ ";
